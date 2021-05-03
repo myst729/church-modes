@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/church-modes/static/css/main.3838ae58.chunk.css",
+    "main.js": "/church-modes/static/js/main.b50dc865.chunk.js",
+    "main.js.map": "/church-modes/static/js/main.b50dc865.chunk.js.map",
+    "runtime-main.js": "/church-modes/static/js/runtime-main.7276ef40.js",
+    "runtime-main.js.map": "/church-modes/static/js/runtime-main.7276ef40.js.map",
+    "static/css/2.9cec3fbf.chunk.css": "/church-modes/static/css/2.9cec3fbf.chunk.css",
+    "static/js/2.0a29bee1.chunk.js": "/church-modes/static/js/2.0a29bee1.chunk.js",
+    "static/js/2.0a29bee1.chunk.js.map": "/church-modes/static/js/2.0a29bee1.chunk.js.map",
+    "static/js/3.0dd3bf01.chunk.js": "/church-modes/static/js/3.0dd3bf01.chunk.js",
+    "static/js/3.0dd3bf01.chunk.js.map": "/church-modes/static/js/3.0dd3bf01.chunk.js.map",
+    "index.html": "/church-modes/index.html",
+    "static/css/2.9cec3fbf.chunk.css.map": "/church-modes/static/css/2.9cec3fbf.chunk.css.map",
+    "static/css/main.3838ae58.chunk.css.map": "/church-modes/static/css/main.3838ae58.chunk.css.map",
+    "static/js/2.0a29bee1.chunk.js.LICENSE.txt": "/church-modes/static/js/2.0a29bee1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7276ef40.js",
+    "static/css/2.9cec3fbf.chunk.css",
+    "static/js/2.0a29bee1.chunk.js",
+    "static/css/main.3838ae58.chunk.css",
+    "static/js/main.b50dc865.chunk.js"
+  ]
+}

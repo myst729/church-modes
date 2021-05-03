@@ -1,5 +1,5 @@
 # Medieval Church Modes
 
-> https://en.wikipedia.org/wiki/Mode_(music)
+> https://myst729.github.io/church-modes
 
-Just to help my daughter better understands the church modes (hopefully :rofl:).
+Just to help my daughter better understands the [church modes](https://en.wikipedia.org/wiki/Mode_(music)) (hopefully :rofl:).
