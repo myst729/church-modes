@@ -1,0 +1,790 @@
+.keys {
+  color: black;
+  width: 842px;
+  font-size: 12px;
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+}
+
+.white {
+  background: white;
+  height: 240px;
+  width: 60px;
+  border: 1px solid black;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.black {
+  background: black;
+  height: 160px;
+  width: 30px;
+  border: 2px solid black;
+  border-top-width: 1px;
+  padding-top: 10px;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+}
+
+/* Modes */
+
+.keyboard-c-ionian     .keys div:nth-child(1), /* C */
+.keyboard-c-ionian     .keys div:nth-child(3), /* D */
+.keyboard-c-ionian     .keys div:nth-child(5), /* E */
+.keyboard-c-ionian     .keys div:nth-child(6), /* F */
+.keyboard-c-ionian     .keys div:nth-child(8), /* G */
+.keyboard-c-ionian     .keys div:nth-child(10), /* A */
+.keyboard-c-ionian     .keys div:nth-child(12), /* B */
+
+.keyboard-c-dorian     .keys div:nth-child(1), /* C */
+.keyboard-c-dorian     .keys div:nth-child(3), /* D */
+.keyboard-c-dorian     .keys div:nth-child(4), /* ♭E */
+.keyboard-c-dorian     .keys div:nth-child(6), /* F */
+.keyboard-c-dorian     .keys div:nth-child(8), /* G */
+.keyboard-c-dorian     .keys div:nth-child(10), /* A */
+.keyboard-c-dorian     .keys div:nth-child(11), /* ♭B */
+
+.keyboard-c-phrygian   .keys div:nth-child(1), /* C */
+.keyboard-c-phrygian   .keys div:nth-child(2), /* ♭D */
+.keyboard-c-phrygian   .keys div:nth-child(4), /* ♭E */
+.keyboard-c-phrygian   .keys div:nth-child(6), /* F */
+.keyboard-c-phrygian   .keys div:nth-child(8), /* G */
+.keyboard-c-phrygian   .keys div:nth-child(9), /* ♭A */
+.keyboard-c-phrygian   .keys div:nth-child(11), /* ♭B */
+
+.keyboard-c-lydian     .keys div:nth-child(1), /* C */
+.keyboard-c-lydian     .keys div:nth-child(3), /* D */
+.keyboard-c-lydian     .keys div:nth-child(5), /* E */
+.keyboard-c-lydian     .keys div:nth-child(7), /* ♯F */
+.keyboard-c-lydian     .keys div:nth-child(8), /* G */
+.keyboard-c-lydian     .keys div:nth-child(10), /* A */
+.keyboard-c-lydian     .keys div:nth-child(12), /* B */
+
+.keyboard-c-mixolydian .keys div:nth-child(1), /* C */
+.keyboard-c-mixolydian .keys div:nth-child(3), /* D */
+.keyboard-c-mixolydian .keys div:nth-child(5), /* E */
+.keyboard-c-mixolydian .keys div:nth-child(6), /* F */
+.keyboard-c-mixolydian .keys div:nth-child(8), /* G */
+.keyboard-c-mixolydian .keys div:nth-child(10), /* A */
+.keyboard-c-mixolydian .keys div:nth-child(11), /* ♭B */
+
+.keyboard-c-aeolian    .keys div:nth-child(1), /* C */
+.keyboard-c-aeolian    .keys div:nth-child(3), /* D */
+.keyboard-c-aeolian    .keys div:nth-child(4), /* ♭E */
+.keyboard-c-aeolian    .keys div:nth-child(6), /* F */
+.keyboard-c-aeolian    .keys div:nth-child(8), /* G */
+.keyboard-c-aeolian    .keys div:nth-child(9), /* ♭A */
+.keyboard-c-aeolian    .keys div:nth-child(11), /* ♭B */
+
+.keyboard-c-locrian    .keys div:nth-child(1), /* C */
+.keyboard-c-locrian    .keys div:nth-child(2), /* ♭D */
+.keyboard-c-locrian    .keys div:nth-child(4), /* ♭E */
+.keyboard-c-locrian    .keys div:nth-child(6), /* F */
+.keyboard-c-locrian    .keys div:nth-child(7), /* ♭G */
+.keyboard-c-locrian    .keys div:nth-child(9), /* ♭A */
+.keyboard-c-locrian    .keys div:nth-child(11), /* ♭B */
+
+.keyboard-d-ionian     .keys div:nth-child(3), /* D */
+.keyboard-d-ionian     .keys div:nth-child(5), /* E */
+.keyboard-d-ionian     .keys div:nth-child(7), /* ♯F */
+.keyboard-d-ionian     .keys div:nth-child(8), /* G */
+.keyboard-d-ionian     .keys div:nth-child(10), /* A */
+.keyboard-d-ionian     .keys div:nth-child(12), /* B */
+.keyboard-d-ionian     .keys div:nth-child(14), /* ♯C */
+
+.keyboard-d-dorian     .keys div:nth-child(3), /* D */
+.keyboard-d-dorian     .keys div:nth-child(5), /* E */
+.keyboard-d-dorian     .keys div:nth-child(6), /* F */
+.keyboard-d-dorian     .keys div:nth-child(8), /* G */
+.keyboard-d-dorian     .keys div:nth-child(10), /* A */
+.keyboard-d-dorian     .keys div:nth-child(12), /* B */
+.keyboard-d-dorian     .keys div:nth-child(13), /* C */
+
+.keyboard-d-phrygian   .keys div:nth-child(3), /* D */
+.keyboard-d-phrygian   .keys div:nth-child(4), /* ♭E */
+.keyboard-d-phrygian   .keys div:nth-child(6), /* F */
+.keyboard-d-phrygian   .keys div:nth-child(8), /* G */
+.keyboard-d-phrygian   .keys div:nth-child(10), /* A */
+.keyboard-d-phrygian   .keys div:nth-child(11), /* ♭B */
+.keyboard-d-phrygian   .keys div:nth-child(13), /* C */
+
+.keyboard-d-lydian     .keys div:nth-child(3), /* D */
+.keyboard-d-lydian     .keys div:nth-child(5), /* E */
+.keyboard-d-lydian     .keys div:nth-child(7), /* ♯F */
+.keyboard-d-lydian     .keys div:nth-child(9), /* ♯G */
+.keyboard-d-lydian     .keys div:nth-child(10), /* A */
+.keyboard-d-lydian     .keys div:nth-child(12), /* B */
+.keyboard-d-lydian     .keys div:nth-child(14), /* ♯C */
+
+.keyboard-d-mixolydian .keys div:nth-child(3), /* D */
+.keyboard-d-mixolydian .keys div:nth-child(5), /* E */
+.keyboard-d-mixolydian .keys div:nth-child(7), /* ♯F */
+.keyboard-d-mixolydian .keys div:nth-child(8), /* G */
+.keyboard-d-mixolydian .keys div:nth-child(10), /* A */
+.keyboard-d-mixolydian .keys div:nth-child(12), /* B */
+.keyboard-d-mixolydian .keys div:nth-child(13), /* C */
+
+.keyboard-d-aeolian    .keys div:nth-child(3), /* D */
+.keyboard-d-aeolian    .keys div:nth-child(5), /* E */
+.keyboard-d-aeolian    .keys div:nth-child(6), /* F */
+.keyboard-d-aeolian    .keys div:nth-child(8), /* G */
+.keyboard-d-aeolian    .keys div:nth-child(10), /* A */
+.keyboard-d-aeolian    .keys div:nth-child(11), /* ♭B */
+.keyboard-d-aeolian    .keys div:nth-child(13), /* C */
+
+.keyboard-d-locrian    .keys div:nth-child(3), /* D */
+.keyboard-d-locrian    .keys div:nth-child(4), /* ♭E */
+.keyboard-d-locrian    .keys div:nth-child(6), /* F */
+.keyboard-d-locrian    .keys div:nth-child(8), /* G */
+.keyboard-d-locrian    .keys div:nth-child(9), /* ♭A */
+.keyboard-d-locrian    .keys div:nth-child(11), /* ♭B */
+.keyboard-d-locrian    .keys div:nth-child(13), /* C */
+
+.keyboard-e-ionian     .keys div:nth-child(5), /* E */
+.keyboard-e-ionian     .keys div:nth-child(7), /* ♯F */
+.keyboard-e-ionian     .keys div:nth-child(9), /* ♯G */
+.keyboard-e-ionian     .keys div:nth-child(10), /* A */
+.keyboard-e-ionian     .keys div:nth-child(12), /* B */
+.keyboard-e-ionian     .keys div:nth-child(14), /* ♯C */
+.keyboard-e-ionian     .keys div:nth-child(16), /* ♯D */
+
+.keyboard-e-dorian     .keys div:nth-child(5), /* E */
+.keyboard-e-dorian     .keys div:nth-child(7), /* ♯F */
+.keyboard-e-dorian     .keys div:nth-child(8), /* G */
+.keyboard-e-dorian     .keys div:nth-child(10), /* A */
+.keyboard-e-dorian     .keys div:nth-child(12), /* B */
+.keyboard-e-dorian     .keys div:nth-child(14), /* ♯C */
+.keyboard-e-dorian     .keys div:nth-child(15), /* D */
+
+.keyboard-e-phrygian   .keys div:nth-child(5), /* E */
+.keyboard-e-phrygian   .keys div:nth-child(6), /* F */
+.keyboard-e-phrygian   .keys div:nth-child(8), /* G */
+.keyboard-e-phrygian   .keys div:nth-child(10), /* A */
+.keyboard-e-phrygian   .keys div:nth-child(12), /* B */
+.keyboard-e-phrygian   .keys div:nth-child(13), /* C */
+.keyboard-e-phrygian   .keys div:nth-child(15), /* D */
+
+.keyboard-e-lydian     .keys div:nth-child(5), /* E */
+.keyboard-e-lydian     .keys div:nth-child(7), /* ♯F */
+.keyboard-e-lydian     .keys div:nth-child(9), /* ♯G */
+.keyboard-e-lydian     .keys div:nth-child(11), /* ♯A */
+.keyboard-e-lydian     .keys div:nth-child(12), /* B */
+.keyboard-e-lydian     .keys div:nth-child(14), /* ♯C */
+.keyboard-e-lydian     .keys div:nth-child(16), /* ♯D */
+
+.keyboard-e-mixolydian .keys div:nth-child(5), /* E */
+.keyboard-e-mixolydian .keys div:nth-child(7), /* ♯F */
+.keyboard-e-mixolydian .keys div:nth-child(9), /* ♯G */
+.keyboard-e-mixolydian .keys div:nth-child(10), /* A */
+.keyboard-e-mixolydian .keys div:nth-child(12), /* B */
+.keyboard-e-mixolydian .keys div:nth-child(14), /* ♯C */
+.keyboard-e-mixolydian .keys div:nth-child(15), /* D */
+
+.keyboard-e-aeolian    .keys div:nth-child(5), /* E */
+.keyboard-e-aeolian    .keys div:nth-child(7), /* ♯F */
+.keyboard-e-aeolian    .keys div:nth-child(8), /* G */
+.keyboard-e-aeolian    .keys div:nth-child(10), /* A */
+.keyboard-e-aeolian    .keys div:nth-child(12), /* B */
+.keyboard-e-aeolian    .keys div:nth-child(13), /* C */
+.keyboard-e-aeolian    .keys div:nth-child(15), /* D */
+
+.keyboard-e-locrian    .keys div:nth-child(5), /* E */
+.keyboard-e-locrian    .keys div:nth-child(6), /* F */
+.keyboard-e-locrian    .keys div:nth-child(8), /* G */
+.keyboard-e-locrian    .keys div:nth-child(10), /* A */
+.keyboard-e-locrian    .keys div:nth-child(11), /* ♭B */
+.keyboard-e-locrian    .keys div:nth-child(13), /* C */
+.keyboard-e-locrian    .keys div:nth-child(15), /* D */
+
+.keyboard-f-ionian     .keys div:nth-child(6), /* F */
+.keyboard-f-ionian     .keys div:nth-child(8), /* G */
+.keyboard-f-ionian     .keys div:nth-child(10), /* A */
+.keyboard-f-ionian     .keys div:nth-child(11), /* ♭B */
+.keyboard-f-ionian     .keys div:nth-child(13), /* C */
+.keyboard-f-ionian     .keys div:nth-child(15), /* D */
+.keyboard-f-ionian     .keys div:nth-child(17), /* E */
+
+.keyboard-f-dorian     .keys div:nth-child(6), /* F */
+.keyboard-f-dorian     .keys div:nth-child(8), /* G */
+.keyboard-f-dorian     .keys div:nth-child(9), /* ♭A */
+.keyboard-f-dorian     .keys div:nth-child(11), /* ♭B */
+.keyboard-f-dorian     .keys div:nth-child(13), /* C */
+.keyboard-f-dorian     .keys div:nth-child(15), /* D */
+.keyboard-f-dorian     .keys div:nth-child(16), /* ♭E */
+
+.keyboard-f-phrygian   .keys div:nth-child(6), /* F */
+.keyboard-f-phrygian   .keys div:nth-child(7), /* ♭G */
+.keyboard-f-phrygian   .keys div:nth-child(9), /* ♭A */
+.keyboard-f-phrygian   .keys div:nth-child(11), /* ♭B */
+.keyboard-f-phrygian   .keys div:nth-child(13), /* C */
+.keyboard-f-phrygian   .keys div:nth-child(14), /* ♭D */
+.keyboard-f-phrygian   .keys div:nth-child(16), /* ♭E */
+
+.keyboard-f-lydian     .keys div:nth-child(6), /* F */
+.keyboard-f-lydian     .keys div:nth-child(8), /* G */
+.keyboard-f-lydian     .keys div:nth-child(10), /* A */
+.keyboard-f-lydian     .keys div:nth-child(12), /* B */
+.keyboard-f-lydian     .keys div:nth-child(13), /* C */
+.keyboard-f-lydian     .keys div:nth-child(15), /* D */
+.keyboard-f-lydian     .keys div:nth-child(17), /* E */
+
+.keyboard-f-mixolydian .keys div:nth-child(6), /* F */
+.keyboard-f-mixolydian .keys div:nth-child(8), /* G */
+.keyboard-f-mixolydian .keys div:nth-child(10), /* A */
+.keyboard-f-mixolydian .keys div:nth-child(11), /* ♭B */
+.keyboard-f-mixolydian .keys div:nth-child(13), /* C */
+.keyboard-f-mixolydian .keys div:nth-child(15), /* D */
+.keyboard-f-mixolydian .keys div:nth-child(16), /* ♭E */
+
+.keyboard-f-aeolian    .keys div:nth-child(6), /* F */
+.keyboard-f-aeolian    .keys div:nth-child(8), /* G */
+.keyboard-f-aeolian    .keys div:nth-child(9), /* ♭A */
+.keyboard-f-aeolian    .keys div:nth-child(11), /* ♭B */
+.keyboard-f-aeolian    .keys div:nth-child(13), /* C */
+.keyboard-f-aeolian    .keys div:nth-child(14), /* ♭D */
+.keyboard-f-aeolian    .keys div:nth-child(16), /* ♭E */
+
+.keyboard-f-locrian    .keys div:nth-child(6), /* F */
+.keyboard-f-locrian    .keys div:nth-child(7), /* ♭G */
+.keyboard-f-locrian    .keys div:nth-child(9), /* ♭A */
+.keyboard-f-locrian    .keys div:nth-child(11), /* ♭B */
+.keyboard-f-locrian    .keys div:nth-child(12), /* ♭C */
+.keyboard-f-locrian    .keys div:nth-child(14), /* ♭D */
+.keyboard-f-locrian    .keys div:nth-child(16), /* ♭E */
+
+.keyboard-g-ionian     .keys div:nth-child(8), /* G */
+.keyboard-g-ionian     .keys div:nth-child(10), /* A */
+.keyboard-g-ionian     .keys div:nth-child(12), /* B */
+.keyboard-g-ionian     .keys div:nth-child(13), /* C */
+.keyboard-g-ionian     .keys div:nth-child(15), /* D */
+.keyboard-g-ionian     .keys div:nth-child(17), /* E */
+.keyboard-g-ionian     .keys div:nth-child(19), /* ♯F */
+
+.keyboard-g-dorian     .keys div:nth-child(8), /* G */
+.keyboard-g-dorian     .keys div:nth-child(10), /* A */
+.keyboard-g-dorian     .keys div:nth-child(11), /* ♭B */
+.keyboard-g-dorian     .keys div:nth-child(13), /* C */
+.keyboard-g-dorian     .keys div:nth-child(15), /* D */
+.keyboard-g-dorian     .keys div:nth-child(17), /* E */
+.keyboard-g-dorian     .keys div:nth-child(18), /* F */
+
+.keyboard-g-phrygian   .keys div:nth-child(8), /* G */
+.keyboard-g-phrygian   .keys div:nth-child(9), /* ♭A */
+.keyboard-g-phrygian   .keys div:nth-child(11), /* ♭B */
+.keyboard-g-phrygian   .keys div:nth-child(13), /* C */
+.keyboard-g-phrygian   .keys div:nth-child(15), /* D */
+.keyboard-g-phrygian   .keys div:nth-child(16), /* ♭E */
+.keyboard-g-phrygian   .keys div:nth-child(18), /* F */
+
+.keyboard-g-lydian     .keys div:nth-child(8), /* G */
+.keyboard-g-lydian     .keys div:nth-child(10), /* A */
+.keyboard-g-lydian     .keys div:nth-child(12), /* B */
+.keyboard-g-lydian     .keys div:nth-child(14), /* ♯C */
+.keyboard-g-lydian     .keys div:nth-child(15), /* D */
+.keyboard-g-lydian     .keys div:nth-child(17), /* E */
+.keyboard-g-lydian     .keys div:nth-child(19), /* ♯F */
+
+.keyboard-g-mixolydian .keys div:nth-child(8), /* G */
+.keyboard-g-mixolydian .keys div:nth-child(10), /* A */
+.keyboard-g-mixolydian .keys div:nth-child(12), /* B */
+.keyboard-g-mixolydian .keys div:nth-child(13), /* C */
+.keyboard-g-mixolydian .keys div:nth-child(15), /* D */
+.keyboard-g-mixolydian .keys div:nth-child(17), /* E */
+.keyboard-g-mixolydian .keys div:nth-child(18), /* F */
+
+.keyboard-g-aeolian    .keys div:nth-child(8), /* G */
+.keyboard-g-aeolian    .keys div:nth-child(10), /* A */
+.keyboard-g-aeolian    .keys div:nth-child(11), /* ♭B */
+.keyboard-g-aeolian    .keys div:nth-child(13), /* C */
+.keyboard-g-aeolian    .keys div:nth-child(15), /* D */
+.keyboard-g-aeolian    .keys div:nth-child(16), /* ♭E */
+.keyboard-g-aeolian    .keys div:nth-child(18), /* F */
+
+.keyboard-g-locrian    .keys div:nth-child(8), /* G */
+.keyboard-g-locrian    .keys div:nth-child(9), /* ♭A */
+.keyboard-g-locrian    .keys div:nth-child(11), /* ♭B */
+.keyboard-g-locrian    .keys div:nth-child(13), /* C */
+.keyboard-g-locrian    .keys div:nth-child(14), /* ♭D */
+.keyboard-g-locrian    .keys div:nth-child(16), /* ♭E */
+.keyboard-g-locrian    .keys div:nth-child(18), /* F */
+
+.keyboard-a-ionian     .keys div:nth-child(10), /* A */
+.keyboard-a-ionian     .keys div:nth-child(12), /* B */
+.keyboard-a-ionian     .keys div:nth-child(14), /* ♯C */
+.keyboard-a-ionian     .keys div:nth-child(15), /* D */
+.keyboard-a-ionian     .keys div:nth-child(17), /* E */
+.keyboard-a-ionian     .keys div:nth-child(19), /* ♯F */
+.keyboard-a-ionian     .keys div:nth-child(21), /* ♯G */
+
+.keyboard-a-dorian     .keys div:nth-child(10), /* A */
+.keyboard-a-dorian     .keys div:nth-child(12), /* B */
+.keyboard-a-dorian     .keys div:nth-child(13), /* C */
+.keyboard-a-dorian     .keys div:nth-child(15), /* D */
+.keyboard-a-dorian     .keys div:nth-child(17), /* E */
+.keyboard-a-dorian     .keys div:nth-child(19), /* ♯F */
+.keyboard-a-dorian     .keys div:nth-child(20), /* G */
+
+.keyboard-a-phrygian   .keys div:nth-child(10), /* A */
+.keyboard-a-phrygian   .keys div:nth-child(11), /* ♭B */
+.keyboard-a-phrygian   .keys div:nth-child(13), /* C */
+.keyboard-a-phrygian   .keys div:nth-child(15), /* D */
+.keyboard-a-phrygian   .keys div:nth-child(17), /* E */
+.keyboard-a-phrygian   .keys div:nth-child(18), /* F */
+.keyboard-a-phrygian   .keys div:nth-child(20), /* G */
+
+.keyboard-a-lydian     .keys div:nth-child(10), /* A */
+.keyboard-a-lydian     .keys div:nth-child(12), /* B */
+.keyboard-a-lydian     .keys div:nth-child(14), /* ♯C */
+.keyboard-a-lydian     .keys div:nth-child(16), /* ♯D */
+.keyboard-a-lydian     .keys div:nth-child(17), /* E */
+.keyboard-a-lydian     .keys div:nth-child(19), /* ♯F */
+.keyboard-a-lydian     .keys div:nth-child(21), /* ♯G */
+
+.keyboard-a-mixolydian .keys div:nth-child(10), /* A */
+.keyboard-a-mixolydian .keys div:nth-child(12), /* B */
+.keyboard-a-mixolydian .keys div:nth-child(14), /* ♯C */
+.keyboard-a-mixolydian .keys div:nth-child(15), /* D */
+.keyboard-a-mixolydian .keys div:nth-child(17), /* E */
+.keyboard-a-mixolydian .keys div:nth-child(19), /* ♯F */
+.keyboard-a-mixolydian .keys div:nth-child(20), /* G */
+
+.keyboard-a-aeolian    .keys div:nth-child(10), /* A */
+.keyboard-a-aeolian    .keys div:nth-child(12), /* B */
+.keyboard-a-aeolian    .keys div:nth-child(13), /* C */
+.keyboard-a-aeolian    .keys div:nth-child(15), /* D */
+.keyboard-a-aeolian    .keys div:nth-child(17), /* E */
+.keyboard-a-aeolian    .keys div:nth-child(18), /* F */
+.keyboard-a-aeolian    .keys div:nth-child(20), /* G */
+
+.keyboard-a-locrian    .keys div:nth-child(10), /* A */
+.keyboard-a-locrian    .keys div:nth-child(11), /* ♭B */
+.keyboard-a-locrian    .keys div:nth-child(13), /* C */
+.keyboard-a-locrian    .keys div:nth-child(15), /* D */
+.keyboard-a-locrian    .keys div:nth-child(16), /* ♭E */
+.keyboard-a-locrian    .keys div:nth-child(18), /* F */
+.keyboard-a-locrian    .keys div:nth-child(20), /* G */
+
+.keyboard-b-ionian     .keys div:nth-child(12), /* B */
+.keyboard-b-ionian     .keys div:nth-child(14), /* ♯C */
+.keyboard-b-ionian     .keys div:nth-child(16), /* ♯D */
+.keyboard-b-ionian     .keys div:nth-child(17), /* E */
+.keyboard-b-ionian     .keys div:nth-child(19), /* ♯F */
+.keyboard-b-ionian     .keys div:nth-child(21), /* ♯G */
+.keyboard-b-ionian     .keys div:nth-child(23), /* ♯A */
+
+.keyboard-b-dorian     .keys div:nth-child(12), /* B */
+.keyboard-b-dorian     .keys div:nth-child(14), /* ♯C */
+.keyboard-b-dorian     .keys div:nth-child(15), /* D */
+.keyboard-b-dorian     .keys div:nth-child(17), /* E */
+.keyboard-b-dorian     .keys div:nth-child(19), /* ♯F */
+.keyboard-b-dorian     .keys div:nth-child(21), /* ♯G */
+.keyboard-b-dorian     .keys div:nth-child(22), /* A */
+
+.keyboard-b-phrygian   .keys div:nth-child(12), /* B */
+.keyboard-b-phrygian   .keys div:nth-child(13), /* C */
+.keyboard-b-phrygian   .keys div:nth-child(15), /* D */
+.keyboard-b-phrygian   .keys div:nth-child(17), /* E */
+.keyboard-b-phrygian   .keys div:nth-child(19), /* ♯F */
+.keyboard-b-phrygian   .keys div:nth-child(20), /* G */
+.keyboard-b-phrygian   .keys div:nth-child(22), /* A */
+
+.keyboard-b-lydian     .keys div:nth-child(12), /* B */
+.keyboard-b-lydian     .keys div:nth-child(14), /* ♯C */
+.keyboard-b-lydian     .keys div:nth-child(16), /* ♯D */
+.keyboard-b-lydian     .keys div:nth-child(18), /* ♯E */
+.keyboard-b-lydian     .keys div:nth-child(19), /* ♯F */
+.keyboard-b-lydian     .keys div:nth-child(21), /* ♯G */
+.keyboard-b-lydian     .keys div:nth-child(23), /* ♯A */
+
+.keyboard-b-mixolydian .keys div:nth-child(12), /* B */
+.keyboard-b-mixolydian .keys div:nth-child(14), /* ♯C */
+.keyboard-b-mixolydian .keys div:nth-child(16), /* ♯D */
+.keyboard-b-mixolydian .keys div:nth-child(17), /* E */
+.keyboard-b-mixolydian .keys div:nth-child(19), /* ♯F */
+.keyboard-b-mixolydian .keys div:nth-child(21), /* ♯G */
+.keyboard-b-mixolydian .keys div:nth-child(22), /* A */
+
+.keyboard-b-aeolian    .keys div:nth-child(12), /* B */
+.keyboard-b-aeolian    .keys div:nth-child(14), /* ♯C */
+.keyboard-b-aeolian    .keys div:nth-child(15), /* D */
+.keyboard-b-aeolian    .keys div:nth-child(17), /* E */
+.keyboard-b-aeolian    .keys div:nth-child(19), /* ♯F */
+.keyboard-b-aeolian    .keys div:nth-child(20), /* G */
+.keyboard-b-aeolian    .keys div:nth-child(22), /* A */
+
+.keyboard-b-locrian    .keys div:nth-child(12), /* B */
+.keyboard-b-locrian    .keys div:nth-child(13), /* C */
+.keyboard-b-locrian    .keys div:nth-child(15), /* D */
+.keyboard-b-locrian    .keys div:nth-child(17), /* E */
+.keyboard-b-locrian    .keys div:nth-child(18), /* F */
+.keyboard-b-locrian    .keys div:nth-child(20), /* G */
+.keyboard-b-locrian    .keys div:nth-child(22)  /* A */ { background: #fcc; cursor: pointer; }
+
+/* Notes */
+
+.keyboard-f-locrian    .keys div:nth-child(12):after {content: '♭C'; }
+
+.keyboard-c-ionian     .keys div:nth-child(1):after,
+.keyboard-c-dorian     .keys div:nth-child(1):after,
+.keyboard-c-phrygian   .keys div:nth-child(1):after,
+.keyboard-c-lydian     .keys div:nth-child(1):after,
+.keyboard-c-mixolydian .keys div:nth-child(1):after,
+.keyboard-c-aeolian    .keys div:nth-child(1):after,
+.keyboard-c-locrian    .keys div:nth-child(1):after,
+.keyboard-d-dorian     .keys div:nth-child(13):after,
+.keyboard-d-phrygian   .keys div:nth-child(13):after,
+.keyboard-d-mixolydian .keys div:nth-child(13):after,
+.keyboard-d-aeolian    .keys div:nth-child(13):after,
+.keyboard-d-locrian    .keys div:nth-child(13):after,
+.keyboard-e-phrygian   .keys div:nth-child(13):after,
+.keyboard-e-aeolian    .keys div:nth-child(13):after,
+.keyboard-e-locrian    .keys div:nth-child(13):after,
+.keyboard-f-ionian     .keys div:nth-child(13):after,
+.keyboard-f-dorian     .keys div:nth-child(13):after,
+.keyboard-f-phrygian   .keys div:nth-child(13):after,
+.keyboard-f-lydian     .keys div:nth-child(13):after,
+.keyboard-f-mixolydian .keys div:nth-child(13):after,
+.keyboard-f-aeolian    .keys div:nth-child(13):after,
+.keyboard-g-ionian     .keys div:nth-child(13):after,
+.keyboard-g-dorian     .keys div:nth-child(13):after,
+.keyboard-g-phrygian   .keys div:nth-child(13):after,
+.keyboard-g-mixolydian .keys div:nth-child(13):after,
+.keyboard-g-aeolian    .keys div:nth-child(13):after,
+.keyboard-g-locrian    .keys div:nth-child(13):after,
+.keyboard-a-dorian     .keys div:nth-child(13):after,
+.keyboard-a-phrygian   .keys div:nth-child(13):after,
+.keyboard-a-aeolian    .keys div:nth-child(13):after,
+.keyboard-a-locrian    .keys div:nth-child(13):after,
+.keyboard-b-phrygian   .keys div:nth-child(13):after,
+.keyboard-b-locrian    .keys div:nth-child(13):after { content: 'C'; }
+
+.keyboard-d-ionian     .keys div:nth-child(14):after,
+.keyboard-d-lydian     .keys div:nth-child(14):after,
+.keyboard-e-ionian     .keys div:nth-child(14):after,
+.keyboard-e-dorian     .keys div:nth-child(14):after,
+.keyboard-e-lydian     .keys div:nth-child(14):after,
+.keyboard-e-mixolydian .keys div:nth-child(14):after,
+.keyboard-g-lydian     .keys div:nth-child(14):after,
+.keyboard-a-ionian     .keys div:nth-child(14):after,
+.keyboard-a-lydian     .keys div:nth-child(14):after,
+.keyboard-a-mixolydian .keys div:nth-child(14):after,
+.keyboard-b-ionian     .keys div:nth-child(14):after,
+.keyboard-b-dorian     .keys div:nth-child(14):after,
+.keyboard-b-lydian     .keys div:nth-child(14):after,
+.keyboard-b-mixolydian .keys div:nth-child(14):after,
+.keyboard-b-aeolian    .keys div:nth-child(14):after { content: '♯C'; }
+
+.keyboard-c-phrygian   .keys div:nth-child(2):after,
+.keyboard-c-locrian    .keys div:nth-child(2):after,
+.keyboard-f-phrygian   .keys div:nth-child(14):after,
+.keyboard-f-aeolian    .keys div:nth-child(14):after,
+.keyboard-f-locrian    .keys div:nth-child(14):after,
+.keyboard-g-locrian    .keys div:nth-child(14):after { content: '♭D'; }
+
+.keyboard-c-ionian     .keys div:nth-child(3):after,
+.keyboard-c-dorian     .keys div:nth-child(3):after,
+.keyboard-c-lydian     .keys div:nth-child(3):after,
+.keyboard-c-mixolydian .keys div:nth-child(3):after,
+.keyboard-c-aeolian    .keys div:nth-child(3):after,
+.keyboard-d-ionian     .keys div:nth-child(3):after,
+.keyboard-d-dorian     .keys div:nth-child(3):after,
+.keyboard-d-phrygian   .keys div:nth-child(3):after,
+.keyboard-d-lydian     .keys div:nth-child(3):after,
+.keyboard-d-mixolydian .keys div:nth-child(3):after,
+.keyboard-d-aeolian    .keys div:nth-child(3):after,
+.keyboard-d-locrian    .keys div:nth-child(3):after,
+.keyboard-e-dorian     .keys div:nth-child(15):after,
+.keyboard-e-phrygian   .keys div:nth-child(15):after,
+.keyboard-e-mixolydian .keys div:nth-child(15):after,
+.keyboard-e-aeolian    .keys div:nth-child(15):after,
+.keyboard-e-locrian    .keys div:nth-child(15):after,
+.keyboard-f-ionian     .keys div:nth-child(15):after,
+.keyboard-f-dorian     .keys div:nth-child(15):after,
+.keyboard-f-lydian     .keys div:nth-child(15):after,
+.keyboard-f-mixolydian .keys div:nth-child(15):after,
+.keyboard-g-ionian     .keys div:nth-child(15):after,
+.keyboard-g-dorian     .keys div:nth-child(15):after,
+.keyboard-g-phrygian   .keys div:nth-child(15):after,
+.keyboard-g-lydian     .keys div:nth-child(15):after,
+.keyboard-g-mixolydian .keys div:nth-child(15):after,
+.keyboard-g-aeolian    .keys div:nth-child(15):after,
+.keyboard-a-ionian     .keys div:nth-child(15):after,
+.keyboard-a-dorian     .keys div:nth-child(15):after,
+.keyboard-a-phrygian   .keys div:nth-child(15):after,
+.keyboard-a-mixolydian .keys div:nth-child(15):after,
+.keyboard-a-aeolian    .keys div:nth-child(15):after,
+.keyboard-a-locrian    .keys div:nth-child(15):after,
+.keyboard-b-dorian     .keys div:nth-child(15):after,
+.keyboard-b-phrygian   .keys div:nth-child(15):after,
+.keyboard-b-aeolian    .keys div:nth-child(15):after,
+.keyboard-b-locrian    .keys div:nth-child(15):after { content: 'D'; }
+
+.keyboard-e-ionian     .keys div:nth-child(16):after,
+.keyboard-e-lydian     .keys div:nth-child(16):after,
+.keyboard-a-lydian     .keys div:nth-child(16):after,
+.keyboard-b-ionian     .keys div:nth-child(16):after,
+.keyboard-b-lydian     .keys div:nth-child(16):after,
+.keyboard-b-mixolydian .keys div:nth-child(16):after { content: '♯D'; }
+
+.keyboard-c-dorian     .keys div:nth-child(4):after,
+.keyboard-c-phrygian   .keys div:nth-child(4):after,
+.keyboard-c-aeolian    .keys div:nth-child(4):after,
+.keyboard-c-locrian    .keys div:nth-child(4):after,
+.keyboard-d-phrygian   .keys div:nth-child(4):after,
+.keyboard-d-locrian    .keys div:nth-child(4):after,
+.keyboard-f-dorian     .keys div:nth-child(16):after,
+.keyboard-f-phrygian   .keys div:nth-child(16):after,
+.keyboard-f-mixolydian .keys div:nth-child(16):after,
+.keyboard-f-aeolian    .keys div:nth-child(16):after,
+.keyboard-f-locrian    .keys div:nth-child(16):after,
+.keyboard-g-phrygian   .keys div:nth-child(16):after,
+.keyboard-g-aeolian    .keys div:nth-child(16):after,
+.keyboard-g-locrian    .keys div:nth-child(16):after,
+.keyboard-a-locrian    .keys div:nth-child(16):after { content: '♭E'; }
+
+.keyboard-c-ionian     .keys div:nth-child(5):after,
+.keyboard-c-lydian     .keys div:nth-child(5):after,
+.keyboard-c-mixolydian .keys div:nth-child(5):after,
+.keyboard-d-ionian     .keys div:nth-child(5):after,
+.keyboard-d-dorian     .keys div:nth-child(5):after,
+.keyboard-d-lydian     .keys div:nth-child(5):after,
+.keyboard-d-mixolydian .keys div:nth-child(5):after,
+.keyboard-d-aeolian    .keys div:nth-child(5):after,
+.keyboard-e-ionian     .keys div:nth-child(5):after,
+.keyboard-e-dorian     .keys div:nth-child(5):after,
+.keyboard-e-phrygian   .keys div:nth-child(5):after,
+.keyboard-e-lydian     .keys div:nth-child(5):after,
+.keyboard-e-mixolydian .keys div:nth-child(5):after,
+.keyboard-e-aeolian    .keys div:nth-child(5):after,
+.keyboard-e-locrian    .keys div:nth-child(5):after,
+.keyboard-f-ionian     .keys div:nth-child(17):after,
+.keyboard-f-lydian     .keys div:nth-child(17):after,
+.keyboard-g-ionian     .keys div:nth-child(17):after,
+.keyboard-g-dorian     .keys div:nth-child(17):after,
+.keyboard-g-lydian     .keys div:nth-child(17):after,
+.keyboard-g-mixolydian .keys div:nth-child(17):after,
+.keyboard-a-ionian     .keys div:nth-child(17):after,
+.keyboard-a-dorian     .keys div:nth-child(17):after,
+.keyboard-a-phrygian   .keys div:nth-child(17):after,
+.keyboard-a-lydian     .keys div:nth-child(17):after,
+.keyboard-a-mixolydian .keys div:nth-child(17):after,
+.keyboard-a-aeolian    .keys div:nth-child(17):after,
+.keyboard-b-ionian     .keys div:nth-child(17):after,
+.keyboard-b-dorian     .keys div:nth-child(17):after,
+.keyboard-b-phrygian   .keys div:nth-child(17):after,
+.keyboard-b-mixolydian .keys div:nth-child(17):after,
+.keyboard-b-aeolian    .keys div:nth-child(17):after,
+.keyboard-b-locrian    .keys div:nth-child(17):after { content: 'E'; }
+
+.keyboard-b-lydian     .keys div:nth-child(18):after { content: '♯E'; }
+
+.keyboard-c-ionian     .keys div:nth-child(6):after,
+.keyboard-c-dorian     .keys div:nth-child(6):after,
+.keyboard-c-phrygian   .keys div:nth-child(6):after,
+.keyboard-c-mixolydian .keys div:nth-child(6):after,
+.keyboard-c-aeolian    .keys div:nth-child(6):after,
+.keyboard-c-locrian    .keys div:nth-child(6):after,
+.keyboard-d-dorian     .keys div:nth-child(6):after,
+.keyboard-d-phrygian   .keys div:nth-child(6):after,
+.keyboard-d-aeolian    .keys div:nth-child(6):after,
+.keyboard-d-locrian    .keys div:nth-child(6):after,
+.keyboard-e-phrygian   .keys div:nth-child(6):after,
+.keyboard-e-locrian    .keys div:nth-child(6):after,
+.keyboard-f-ionian     .keys div:nth-child(6):after,
+.keyboard-f-dorian     .keys div:nth-child(6):after,
+.keyboard-f-phrygian   .keys div:nth-child(6):after,
+.keyboard-f-lydian     .keys div:nth-child(6):after,
+.keyboard-f-mixolydian .keys div:nth-child(6):after,
+.keyboard-f-aeolian    .keys div:nth-child(6):after,
+.keyboard-f-locrian    .keys div:nth-child(6):after,
+.keyboard-g-dorian     .keys div:nth-child(18):after,
+.keyboard-g-phrygian   .keys div:nth-child(18):after,
+.keyboard-g-mixolydian .keys div:nth-child(18):after,
+.keyboard-g-aeolian    .keys div:nth-child(18):after,
+.keyboard-g-locrian    .keys div:nth-child(18):after,
+.keyboard-a-phrygian   .keys div:nth-child(18):after,
+.keyboard-a-aeolian    .keys div:nth-child(18):after,
+.keyboard-a-locrian    .keys div:nth-child(18):after,
+.keyboard-b-locrian    .keys div:nth-child(18):after { content: 'F'; }
+
+.keyboard-c-lydian     .keys div:nth-child(7):after,
+.keyboard-d-ionian     .keys div:nth-child(7):after,
+.keyboard-d-lydian     .keys div:nth-child(7):after,
+.keyboard-d-mixolydian .keys div:nth-child(7):after,
+.keyboard-e-ionian     .keys div:nth-child(7):after,
+.keyboard-e-dorian     .keys div:nth-child(7):after,
+.keyboard-e-lydian     .keys div:nth-child(7):after,
+.keyboard-e-mixolydian .keys div:nth-child(7):after,
+.keyboard-e-aeolian    .keys div:nth-child(7):after,
+.keyboard-g-ionian     .keys div:nth-child(19):after,
+.keyboard-g-lydian     .keys div:nth-child(19):after,
+.keyboard-a-ionian     .keys div:nth-child(19):after,
+.keyboard-a-dorian     .keys div:nth-child(19):after,
+.keyboard-a-lydian     .keys div:nth-child(19):after,
+.keyboard-a-mixolydian .keys div:nth-child(19):after,
+.keyboard-b-ionian     .keys div:nth-child(19):after,
+.keyboard-b-dorian     .keys div:nth-child(19):after,
+.keyboard-b-phrygian   .keys div:nth-child(19):after,
+.keyboard-b-lydian     .keys div:nth-child(19):after,
+.keyboard-b-mixolydian .keys div:nth-child(19):after,
+.keyboard-b-aeolian    .keys div:nth-child(19):after { content: '♯F'; }
+
+.keyboard-c-locrian    .keys div:nth-child(7):after,
+.keyboard-f-phrygian   .keys div:nth-child(7):after,
+.keyboard-f-locrian    .keys div:nth-child(7):after { content: '♭G'; }
+
+.keyboard-c-ionian     .keys div:nth-child(8):after,
+.keyboard-c-dorian     .keys div:nth-child(8):after,
+.keyboard-c-phrygian   .keys div:nth-child(8):after,
+.keyboard-c-lydian     .keys div:nth-child(8):after,
+.keyboard-c-mixolydian .keys div:nth-child(8):after,
+.keyboard-c-aeolian    .keys div:nth-child(8):after,
+.keyboard-d-ionian     .keys div:nth-child(8):after,
+.keyboard-d-dorian     .keys div:nth-child(8):after,
+.keyboard-d-phrygian   .keys div:nth-child(8):after,
+.keyboard-d-mixolydian .keys div:nth-child(8):after,
+.keyboard-d-aeolian    .keys div:nth-child(8):after,
+.keyboard-d-locrian    .keys div:nth-child(8):after,
+.keyboard-e-dorian     .keys div:nth-child(8):after,
+.keyboard-e-phrygian   .keys div:nth-child(8):after,
+.keyboard-e-aeolian    .keys div:nth-child(8):after,
+.keyboard-e-locrian    .keys div:nth-child(8):after,
+.keyboard-f-ionian     .keys div:nth-child(8):after,
+.keyboard-f-dorian     .keys div:nth-child(8):after,
+.keyboard-f-lydian     .keys div:nth-child(8):after,
+.keyboard-f-mixolydian .keys div:nth-child(8):after,
+.keyboard-f-aeolian    .keys div:nth-child(8):after,
+.keyboard-g-ionian     .keys div:nth-child(8):after,
+.keyboard-g-dorian     .keys div:nth-child(8):after,
+.keyboard-g-phrygian   .keys div:nth-child(8):after,
+.keyboard-g-lydian     .keys div:nth-child(8):after,
+.keyboard-g-mixolydian .keys div:nth-child(8):after,
+.keyboard-g-aeolian    .keys div:nth-child(8):after,
+.keyboard-g-locrian    .keys div:nth-child(8):after,
+.keyboard-a-dorian     .keys div:nth-child(20):after,
+.keyboard-a-phrygian   .keys div:nth-child(20):after,
+.keyboard-a-mixolydian .keys div:nth-child(20):after,
+.keyboard-a-aeolian    .keys div:nth-child(20):after,
+.keyboard-a-locrian    .keys div:nth-child(20):after,
+.keyboard-b-phrygian   .keys div:nth-child(20):after,
+.keyboard-b-aeolian    .keys div:nth-child(20):after,
+.keyboard-b-locrian    .keys div:nth-child(20):after { content: 'G'; }
+
+.keyboard-d-lydian     .keys div:nth-child(9):after,
+.keyboard-e-ionian     .keys div:nth-child(9):after,
+.keyboard-e-lydian     .keys div:nth-child(9):after,
+.keyboard-e-mixolydian .keys div:nth-child(9):after,
+.keyboard-a-ionian     .keys div:nth-child(21):after,
+.keyboard-a-lydian     .keys div:nth-child(21):after,
+.keyboard-b-ionian     .keys div:nth-child(21):after,
+.keyboard-b-dorian     .keys div:nth-child(21):after,
+.keyboard-b-lydian     .keys div:nth-child(21):after,
+.keyboard-b-mixolydian .keys div:nth-child(21):after { content: '♯G'; }
+
+.keyboard-c-phrygian   .keys div:nth-child(9):after,
+.keyboard-c-aeolian    .keys div:nth-child(9):after,
+.keyboard-c-locrian    .keys div:nth-child(9):after,
+.keyboard-d-locrian    .keys div:nth-child(9):after,
+.keyboard-f-dorian     .keys div:nth-child(9):after,
+.keyboard-f-phrygian   .keys div:nth-child(9):after,
+.keyboard-f-aeolian    .keys div:nth-child(9):after,
+.keyboard-f-locrian    .keys div:nth-child(9):after,
+.keyboard-g-phrygian   .keys div:nth-child(9):after,
+.keyboard-g-locrian    .keys div:nth-child(9):after { content: '♭A'; }
+
+.keyboard-c-ionian     .keys div:nth-child(10):after,
+.keyboard-c-dorian     .keys div:nth-child(10):after,
+.keyboard-c-lydian     .keys div:nth-child(10):after,
+.keyboard-c-mixolydian .keys div:nth-child(10):after,
+.keyboard-d-ionian     .keys div:nth-child(10):after,
+.keyboard-d-dorian     .keys div:nth-child(10):after,
+.keyboard-d-phrygian   .keys div:nth-child(10):after,
+.keyboard-d-lydian     .keys div:nth-child(10):after,
+.keyboard-d-mixolydian .keys div:nth-child(10):after,
+.keyboard-d-aeolian    .keys div:nth-child(10):after,
+.keyboard-e-ionian     .keys div:nth-child(10):after,
+.keyboard-e-dorian     .keys div:nth-child(10):after,
+.keyboard-e-phrygian   .keys div:nth-child(10):after,
+.keyboard-e-mixolydian .keys div:nth-child(10):after,
+.keyboard-e-aeolian    .keys div:nth-child(10):after,
+.keyboard-e-locrian    .keys div:nth-child(10):after,
+.keyboard-f-ionian     .keys div:nth-child(10):after,
+.keyboard-f-lydian     .keys div:nth-child(10):after,
+.keyboard-f-mixolydian .keys div:nth-child(10):after,
+.keyboard-g-ionian     .keys div:nth-child(10):after,
+.keyboard-g-dorian     .keys div:nth-child(10):after,
+.keyboard-g-lydian     .keys div:nth-child(10):after,
+.keyboard-g-mixolydian .keys div:nth-child(10):after,
+.keyboard-g-aeolian    .keys div:nth-child(10):after,
+.keyboard-a-ionian     .keys div:nth-child(10):after,
+.keyboard-a-dorian     .keys div:nth-child(10):after,
+.keyboard-a-phrygian   .keys div:nth-child(10):after,
+.keyboard-a-lydian     .keys div:nth-child(10):after,
+.keyboard-a-mixolydian .keys div:nth-child(10):after,
+.keyboard-a-aeolian    .keys div:nth-child(10):after,
+.keyboard-a-locrian    .keys div:nth-child(10):after,
+.keyboard-b-dorian     .keys div:nth-child(22):after,
+.keyboard-b-phrygian   .keys div:nth-child(22):after,
+.keyboard-b-mixolydian .keys div:nth-child(22):after,
+.keyboard-b-aeolian    .keys div:nth-child(22):after,
+.keyboard-b-locrian    .keys div:nth-child(22):after { content: 'A'; }
+
+.keyboard-e-lydian     .keys div:nth-child(11):after,
+.keyboard-b-ionian     .keys div:nth-child(23):after,
+.keyboard-b-lydian     .keys div:nth-child(23):after { content: '♯A'; }
+
+.keyboard-c-dorian     .keys div:nth-child(11):after,
+.keyboard-c-phrygian   .keys div:nth-child(11):after,
+.keyboard-c-mixolydian .keys div:nth-child(11):after,
+.keyboard-c-aeolian    .keys div:nth-child(11):after,
+.keyboard-c-locrian    .keys div:nth-child(11):after,
+.keyboard-d-phrygian   .keys div:nth-child(11):after,
+.keyboard-d-aeolian    .keys div:nth-child(11):after,
+.keyboard-d-locrian    .keys div:nth-child(11):after,
+.keyboard-e-locrian    .keys div:nth-child(11):after,
+.keyboard-f-ionian     .keys div:nth-child(11):after,
+.keyboard-f-dorian     .keys div:nth-child(11):after,
+.keyboard-f-phrygian   .keys div:nth-child(11):after,
+.keyboard-f-mixolydian .keys div:nth-child(11):after,
+.keyboard-f-aeolian    .keys div:nth-child(11):after,
+.keyboard-f-locrian    .keys div:nth-child(11):after,
+.keyboard-g-dorian     .keys div:nth-child(11):after,
+.keyboard-g-phrygian   .keys div:nth-child(11):after,
+.keyboard-g-aeolian    .keys div:nth-child(11):after,
+.keyboard-g-locrian    .keys div:nth-child(11):after,
+.keyboard-a-phrygian   .keys div:nth-child(11):after,
+.keyboard-a-locrian    .keys div:nth-child(11):after { content: '♭B'; }
+
+.keyboard-c-ionian     .keys div:nth-child(12):after,
+.keyboard-c-lydian     .keys div:nth-child(12):after,
+.keyboard-d-ionian     .keys div:nth-child(12):after,
+.keyboard-d-dorian     .keys div:nth-child(12):after,
+.keyboard-d-lydian     .keys div:nth-child(12):after,
+.keyboard-d-mixolydian .keys div:nth-child(12):after,
+.keyboard-e-ionian     .keys div:nth-child(12):after,
+.keyboard-e-dorian     .keys div:nth-child(12):after,
+.keyboard-e-phrygian   .keys div:nth-child(12):after,
+.keyboard-e-lydian     .keys div:nth-child(12):after,
+.keyboard-e-mixolydian .keys div:nth-child(12):after,
+.keyboard-e-aeolian    .keys div:nth-child(12):after,
+.keyboard-f-lydian     .keys div:nth-child(12):after,
+.keyboard-g-ionian     .keys div:nth-child(12):after,
+.keyboard-g-lydian     .keys div:nth-child(12):after,
+.keyboard-g-mixolydian .keys div:nth-child(12):after,
+.keyboard-a-ionian     .keys div:nth-child(12):after,
+.keyboard-a-dorian     .keys div:nth-child(12):after,
+.keyboard-a-lydian     .keys div:nth-child(12):after,
+.keyboard-a-mixolydian .keys div:nth-child(12):after,
+.keyboard-a-aeolian    .keys div:nth-child(12):after,
+.keyboard-b-ionian     .keys div:nth-child(12):after,
+.keyboard-b-dorian     .keys div:nth-child(12):after,
+.keyboard-b-phrygian   .keys div:nth-child(12):after,
+.keyboard-b-lydian     .keys div:nth-child(12):after,
+.keyboard-b-mixolydian .keys div:nth-child(12):after,
+.keyboard-b-aeolian    .keys div:nth-child(12):after,
+.keyboard-b-locrian    .keys div:nth-child(12):after { content: 'B'; }

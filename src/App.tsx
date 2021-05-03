@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { Typography } from 'antd'
+import './App.css'
 
-function App() {
+import Keyboard from './components/Keyboard'
+import Tonics, { TonicsType } from './components/Tonics'
+import Modes, { ModesType } from './components/Modes'
+
+const App = () => {
+  const [tonic, setTonic] = useState<TonicsType>(TonicsType.C)
+  const [mode, setMode] = useState<ModesType>(ModesType.Ionian)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Typography.Title>Medieval Church Modes</Typography.Title>
+      <Keyboard tonic={tonic} mode={mode} />
+      <Tonics defaultTonic={tonic} onTonicChange={setTonic} />
+      <Modes defaultMode={mode} onModeChange={setMode} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
