@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Radio, Typography } from 'antd'
+import { Radio, RadioChangeEvent, Typography } from 'antd'
 import { enumKeys } from '../common/utils'
 import './Modes.css'
 
@@ -14,23 +14,20 @@ export enum ModesType {
 }
 
 interface IModesProps {
-  defaultMode?: ModesType;
-  onModeChange: (v: ModesType) => void;
+  mode?: ModesType;
+  onChange?: (v: ModesType) => void;
 }
 
 const Modes = (props: IModesProps) => {
   const {
-    defaultMode = ModesType.Ionian,
-    onModeChange
+    mode = ModesType.Ionian,
+    onChange
   } = props
 
-  const [mode, setMode] = useState<ModesType>(defaultMode)
   const [scaling, setScaling] = useState<number>(0)
 
-  const onChange = (e: any) => {
-    const val = e.target.value
-    setMode(val)
-    onModeChange(val)
+  const onModeChange = (e: RadioChangeEvent) => {
+    onChange && onChange(e.target.value)
   }
 
   useEffect(() => {
@@ -43,13 +40,13 @@ const Modes = (props: IModesProps) => {
   }))
 
   return (
-    <div className="modes" style={{ marginTop: 20 }}>
+    <div className="modes" style={{ marginTop: 30 }}>
       <Typography.Title level={2}>Mode</Typography.Title>
       <div>
         <Radio.Group
           value={mode}
           options={options}
-          onChange={onChange}
+          onChange={onModeChange}
           optionType="button"
           buttonStyle="solid"
         />

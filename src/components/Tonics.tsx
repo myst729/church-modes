@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Radio, Typography } from 'antd'
+import React from 'react'
+import { Radio, RadioChangeEvent, Typography } from 'antd'
 import { enumKeys } from '../common/utils'
 
 export enum TonicsType {
@@ -13,37 +13,33 @@ export enum TonicsType {
 }
 
 interface ITonicsProps {
-  defaultTonic?: TonicsType;
-  onTonicChange: (v: TonicsType) => void;
+  tonic?: TonicsType;
+  onChange?: (v: TonicsType) => void;
 }
 
 const Tonics = (props: ITonicsProps) => {
   const {
-    defaultTonic = TonicsType.C,
-    onTonicChange
+    tonic = TonicsType.C,
+    onChange
   } = props
-
-  const [tonic, setTonic] = useState<TonicsType>(defaultTonic)
-
-  const onChange = (e: any) => {
-    const val = e.target.value
-    setTonic(val)
-    onTonicChange(val)
-  }
 
   const options = enumKeys(TonicsType).map((key: string) => ({
     label: key,
     value: TonicsType[key as unknown as TonicsType],
   }))
 
+  const onTonicChange = (e: RadioChangeEvent) => {
+    onChange && onChange(e.target.value)
+  }
+
   return (
-    <div className="tonics" style={{ marginTop: 20 }}>
+    <div className="tonics" style={{ marginTop: 30 }}>
       <Typography.Title level={2}>Tonic</Typography.Title>
       <div>
         <Radio.Group
           value={tonic}
           options={options}
-          onChange={onChange}
+          onChange={onTonicChange}
           optionType="button"
           buttonStyle="solid"
         />
