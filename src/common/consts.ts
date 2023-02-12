@@ -1,0 +1,230 @@
+import { enumKeys } from './utils'
+
+export const tonicInfo = {
+  C: 0,
+  'C♯': 1,
+  'D♭': 1,
+  D: 2,
+  'D♯': 3,
+  'E♭': 3,
+  E: 4,
+  'E♯': 5,
+  'F♭': 4,
+  F: 5,
+  'F♯': 6,
+  'G♭': 6,
+  G: 7,
+  'G♯': 8,
+  'A♭': 8,
+  A: 9,
+  'A♯': 10,
+  'B♭': 10,
+  B: 11,
+  'B♯': 12,
+  'C♭': 11,
+} as const
+
+export type TonicType = keyof typeof tonicInfo
+export const tonics: TonicType[] = enumKeys(tonicInfo)
+
+export const modeInfo = {
+  Ionian: '2212221',
+  Dorian: '2122212',
+  Phrygian: '1222122',
+  Lydian: '2221221',
+  Mixolydian: '2212212',
+  Aeolian: '2122122',
+  Locrian: '1221222',
+} as const
+
+export type ModeType = keyof typeof modeInfo
+export const modes: ModeType[] = enumKeys(modeInfo)
+
+export const presets = [
+  ['C', 'Ionian'],
+  ['D', 'Dorian'],
+  ['E', 'Phrygian'],
+  ['F', 'Lydian'],
+  ['G', 'Mixolydian'],
+  ['A', 'Aeolian'],
+  ['B', 'Locrian'],
+] as const
+
+// List of pitches on a 25-key keyboard
+export const pitches = [
+  {
+    type: 'white',
+    indexOfType: 0,
+    frequency: 261.63,
+    notations: { B: 'B♯', C: 'C', D: 'D𝄫', E: '', F: '', G: '', A: '' },
+    natural: 'C',
+  },
+  {
+    type: 'black',
+    indexOfType: 0,
+    frequency: 277.18,
+    notations: { B: 'B𝄪', C: 'C♯', D: 'D♭', E: '', F: '', G: '', A: '' },
+    natural: 'C#',
+  },
+  {
+    type: 'white',
+    indexOfType: 1,
+    frequency: 293.66,
+    notations: { C: 'C𝄪', D: 'D', E: 'E𝄫', F: '', G: '', A: '', B: '' },
+    natural: 'D',
+  },
+  {
+    type: 'black',
+    indexOfType: 1,
+    frequency: 311.13,
+    notations: { D: 'D♯', E: 'E♭', F: 'F𝄫', G: '', A: '', B: '', C: '' },
+    natural: 'D♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 2,
+    frequency: 329.63,
+    notations: { D: 'D𝄪', E: 'E', F: 'F♭', G: '', A: '', B: '', C: '' },
+    natural: 'E',
+  },
+  {
+    type: 'white',
+    indexOfType: 3,
+    frequency: 349.23,
+    notations: { E: 'E♯', F: 'F', G: 'G𝄫', A: '', B: '', C: '', D: '' },
+    natural: 'F',
+  },
+  {
+    type: 'black',
+    indexOfType: 2,
+    frequency: 369.99,
+    notations: { E: 'E𝄪', F: 'F♯', G: 'G♭', A: '', B: '', C: '', D: '' },
+    natural: 'F♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 4,
+    frequency: 392.0,
+    notations: { F: 'F𝄪', G: 'G', A: 'A𝄫', B: '', C: '', D: '', E: '' },
+    natural: 'G',
+  },
+  {
+    type: 'black',
+    indexOfType: 3,
+    frequency: 415.3,
+    notations: { G: 'G♯', A: 'A♭', B: '', C: '', D: '', E: '', F: '' },
+    natural: 'G♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 5,
+    frequency: 440.0,
+    notations: { G: 'G𝄪', A: 'A', B: 'B𝄫', C: '', D: '', E: '', F: '' },
+    natural: 'A',
+  },
+  {
+    type: 'black',
+    indexOfType: 4,
+    frequency: 466.16,
+    notations: { A: 'A♯', B: 'B♭', C: 'C𝄫', D: '', E: '', F: '', G: '' },
+    natural: 'A♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 6,
+    frequency: 493.88,
+    notations: { A: 'A𝄪', B: 'B', C: 'C♭', D: '', E: '', F: '', G: '' },
+    natural: 'B',
+  },
+  {
+    type: 'white',
+    indexOfType: 7,
+    frequency: 523.25,
+    notations: { B: 'B♯', C: 'C', D: 'D𝄫', E: '', F: '', G: '', A: '' },
+    natural: 'C',
+  },
+  {
+    type: 'black',
+    indexOfType: 5,
+    frequency: 554.37,
+    notations: { B: 'B𝄪', C: 'C♯', D: 'D♭', E: '', F: '', G: '', A: '' },
+    natural: 'C♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 8,
+    frequency: 587.33,
+    notations: { C: 'C𝄪', D: 'D', E: 'E𝄫', F: '', G: '', A: '', B: '' },
+    natural: 'D',
+  },
+  {
+    type: 'black',
+    indexOfType: 6,
+    frequency: 622.25,
+    notations: { D: 'D♯', E: 'E♭', F: 'F𝄫', G: '', A: '', B: '', C: '' },
+    natural: 'D♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 9,
+    frequency: 659.26,
+    notations: { D: 'D𝄪', E: 'E', F: 'F♭', G: '', A: '', B: '', C: '' },
+    natural: 'E',
+  },
+  {
+    type: 'white',
+    indexOfType: 10,
+    frequency: 698.46,
+    notations: { E: 'E♯', F: 'F', G: 'G𝄫', A: '', B: '', C: '', D: '' },
+    natural: 'F',
+  },
+  {
+    type: 'black',
+    indexOfType: 7,
+    frequency: 739.99,
+    notations: { E: 'E𝄪', F: 'F♯', G: 'G♭', A: '', B: '', C: '', D: '' },
+    natural: 'F♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 11,
+    frequency: 783.99,
+    notations: { F: 'F𝄪', G: 'G', A: 'A𝄫', B: '', C: '', D: '', E: '' },
+    natural: 'G',
+  },
+  {
+    type: 'black',
+    indexOfType: 8,
+    frequency: 830.61,
+    notations: { G: 'G♯', A: 'A♭', B: '', C: '', D: '', E: '', F: '' },
+    natural: 'G♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 12,
+    frequency: 880.0,
+    notations: { G: 'G𝄪', A: 'A', B: 'B𝄫', C: '', D: '', E: '', F: '' },
+    natural: 'A',
+  },
+  {
+    type: 'black',
+    indexOfType: 9,
+    frequency: 932.33,
+    notations: { A: 'A♯', B: 'B♭', C: 'C𝄫', D: '', E: '', F: '', G: '' },
+    natural: 'A♯',
+  },
+  {
+    type: 'white',
+    indexOfType: 13,
+    frequency: 987.77,
+    notations: { A: 'A𝄪', B: 'B', C: 'C♭', D: '', E: '', F: '', G: '' },
+    natural: 'B',
+  },
+  {
+    type: 'white',
+    indexOfType: 14,
+    frequency: 1046.5,
+    notations: { B: 'B♯', C: 'C', D: 'D𝄫', E: '', F: '', G: '', A: '' },
+    natural: 'C',
+  },
+] as const
